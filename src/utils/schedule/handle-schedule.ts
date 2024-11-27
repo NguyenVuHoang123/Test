@@ -17,13 +17,13 @@ export const getResponsibleGroupText = (id: string, calendars: CalendarItem[]) =
   return calendar ? calendar.groupName : 'Không xác định';
 };
 
-// export const userMapping = (userList: User[]) => {
-//   const users = userList.map((user: User) => ({
-//     text: `${user.firstName} ${user.lastName}`,
-//     id: user.id
-//   }))
-//   return users;
-// }
+export const userMapping = (userList: User[]) => {
+  const users = userList.map((user: User) => ({
+    text: `${user.firstName} ${user.lastName}`,
+    id: user.id
+  }))
+  return users;
+}
 
 export const syncfusionStyles = (theme: Theme) => {
   return {
@@ -37,14 +37,14 @@ export const syncfusionStyles = (theme: Theme) => {
           borderColor: theme.palette.primary.main,
           boxShadow: `0 0 0 2px ${theme.palette.primary.main}25`,
         },
-    //   },
-    //   '& .e-input': {
-    //     color: theme.palette.text.primary,
-    //   },
-    //   '& .e-input-group-icon': {
-    //     color: theme.palette.text.primary,
-    //   },
-    // },
+      },
+      '& .e-input': {
+        color: theme.palette.text.primary,
+      },
+      '& .e-input-group-icon': {
+        color: theme.palette.text.primary,
+      },
+    },
     checkbox: {
       '& .e-frame': {
         borderColor: theme.palette.divider,
